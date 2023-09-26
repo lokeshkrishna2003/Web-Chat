@@ -1,0 +1,35 @@
+npm i stream-chat stream-chat-react universal-cookie for chating application after creating react app
+
+for chatting or video applications we have to use stream.io 
+there they provide an api key for us 
+const apiKey = 'etm6q3knjpmk';  we have to write above the function in app.js 
+const client = StreamChat.getInstance(apiKey)
+
+create two components channellist  and channellistcontainer components and export theme inside the components directory
+
+create index.js in components directory so that we all export the components from this file and impot them in app as 
+import { ChannelListContainer,ChannelContainer } from './components';
+
+and in index.js 
+
+export {default as ChannelContainer} from "./ChannelContainer"
+export {default as ChannelListContainer} from "./ChannelListContainer"
+
+client work is completed now we are switching to server side 
+
+first we will create index.js file 
+and npm init -y (for direct creation of package.json )
+now install the necessary dependencies
+npm i bcrypt crypto dotenv express getstream stream-chat nodemon twilio
+
+bcrypt ---> it is used for password hashing
+crypto ---> to create a random cryptographic string (it converts user message into some random string)
+dotenv ---> for envirmental variables
+express
+getstream
+stream-chat
+nodemon
+twilio ---> for sending live sms messages
+cors ---> used for cross origin request
+
+
